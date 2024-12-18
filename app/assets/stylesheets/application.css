@@ -13,3 +13,65 @@
  *= require_tree .
  *= require_self
  */
+
+
+.container {
+  width: 450px; /* Fixed width for the grid and form */
+}
+
+/* Styling for the letter grid */
+.grid {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(57, 134, 165);
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px lightgray;
+}
+
+/* Styling the form */
+form {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%; /* Stretch form to container width */
+}
+
+form input[type="text"],
+form button {
+  box-sizing: border-box; /* Ensures consistent box model */
+  height: 40px; /* Same height for input and button */
+}
+
+form input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 0 10px; /* Horizontal padding only */
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded only on the right side */
+  cursor: pointer;
+  border: 1px solid black; /* Fine black border */
+}
+
+form button:hover {
+  background-color: blue;
+  color: white;
+}
