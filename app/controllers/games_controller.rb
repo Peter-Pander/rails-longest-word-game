@@ -1,5 +1,7 @@
 # app/controllers/games_controller.rb
 
+require 'open-uri'
+
 class GamesController < ApplicationController
   def new
     @letters = Array.new(10) { ('A'..'Z').to_a.sample } # Generates 10 random letters
@@ -16,11 +18,11 @@ class GamesController < ApplicationController
         @message = "Congratulations #{user_word} is a valid English word!"
         @current_word_score = calculate_score(user_word) # Calculate the score for this word
       else
-        @message = "Sorry but #{user_word} does not seem to be a valid English word..."
+        @message = "Sorry but - #{user_word} - does not seem to be a valid English word..."
         @current_word_score = 0
       end
     else
-      @message = "Sorry but #{user_word} can't be built out of #{grid.join(', ')}"
+      @message = "Sorry but - #{user_word} - can't be built out of #{grid.join(', ')}"
       @current_word_score = 0
     end
 

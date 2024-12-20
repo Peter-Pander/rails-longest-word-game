@@ -1,8 +1,10 @@
 <!-- app/views/games/score.html.erb -->
 
-<h1><%= @message %></h1>
+<h1>Result</h1>
+
+<p class="message"><%= @message %></p>
 
 <%# Display the current word's score %>
 <h2>Current Word Score: <%= @current_word_score || 0 %></h2>
 
-<%= link_to 'Play again', new_game_path %>
+<div class="btn"><%= link_to 'Play again', new_game_path %></div>

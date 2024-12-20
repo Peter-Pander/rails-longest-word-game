@@ -15,8 +15,22 @@
  */
 
 
+h1 {
+  padding: 20px 0 0 20px;
+}
+
+h2, .btn {
+  padding-left: 20px;
+}
+
+.message {
+  padding-left: 20px;
+}
+
 .container {
   width: 450px; /* Fixed width for the grid and form */
+  margin: 0; /* Remove centering from container */
+  padding: 20px; /* Optional padding */
 }
 
 /* Styling for the letter grid */
@@ -43,9 +57,9 @@
 /* Styling the form */
 form {
   display: flex;
-  align-items: center;
   gap: 0;
   width: 100%; /* Stretch form to container width */
+  justify-content: flex-start; /* Align form elements to the left */
 }
 
 form input[type="text"],
@@ -58,20 +72,4 @@ form input[type="text"] {
   flex: 1;
   padding: 10px;
   font-size: 16px;
-}
-
-form button {
-  padding: 0 10px; /* Horizontal padding only */
-  font-size: 16px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 0 5px 5px 0; /* Rounded only on the right side */
-  cursor: pointer;
-  border: 1px solid black; /* Fine black border */
-}
-
-form button:hover {
-  background-color: blue;
-  color: white;
 }
